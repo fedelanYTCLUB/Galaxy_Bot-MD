@@ -92,11 +92,9 @@ Si después de instalar el bot en Termux y iniciar la session del bot (el numero
 
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
-<details>
 
 -----
 
-<details>
 
 ## **`⚔️ 𝑷𝒓𝒐𝒑𝒊𝒆𝒕𝒂𝒓𝒊𝒐 𝑫𝒆𝒍 𝑩𝒐𝒕`**
 <a
