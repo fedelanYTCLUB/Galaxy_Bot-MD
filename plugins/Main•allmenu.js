@@ -142,23 +142,49 @@ let handler = async (m, { conn, args }) => {
   🌴 乂 *\`ᴀᴅᴍɪɴ\`* 乂 🌴
 
   .⁎✿ *.ᴀᴅᴅᴘʀᴇᴍ2 <@ᴛᴀɢ> <ᴅᴀʏꜱ>* ✿⁎.
-  .⁎✿ *.ᴀᴅᴅʏᴇɴ2 <@ᴛᴀɢ>* ✿⁎.`.trim();
-
-  let db = JSON.parse(fs.readFileSync('src/database/db.json', 'utf-8'));
-  let videoUrl = db.links.video[0];
+  .⁎✿ *.ᴀᴅᴅʏᴇɴ2 <@ᴛᴀɢ>* ✿⁎ 
+  > *© ⍴᥆ᥕᥱrᥱძ ᑲᥡ fedelanYT*
+`.trim()
 
   await conn.sendMessage(m.chat, {
-    video: { url: videoUrl },
-    caption: txt,
-    gifPlayback: true
-  }, { quoted: m });
+  text: txt,
+  contextInfo: {
+    mentionedJid: [m.sender, userId],
+    isForwarded: true,
+    forwardedNewsletterMessageInfo: {
+      newsletterJid: channelRD.id, // Asegúrate de que channelRD esté definido
+      newsletterName: channelRD.name, // Asegúrate de que channelRD esté definido
+      serverMessageId: -1,
+    },
+    forwardingScore: 16,
+    externalAdReply: {
+      title: "✨ Goku-Bot ✨ World Of Cute", // Título del reply con símbolos
+      body: "➤ Powered By fedelanY ★", // Cuerpo del reply con símbolos
+      thumbnailUrl: banner, // Asegúrate de que banner esté definido (URL o ruta a la imagen)
+      sourceUrl: "https://chat.whatsapp.com/FX6eYrqXtt9L76NDpOm2K7", // Asegúrate de que la URL sea correcta
+      mediaType: 1, // Tipo de media (1 para imagen)
+      showAdAttribution: true,
+      renderLargerThumbnail: true
+    }
+  }
+}, { quoted: m });
 
-  m.react('✅');
-};
+}
 
-handler.help = ['menu'];
-handler.tags = ['main'];
-handler.command = ['main', 'menu', 'menuall', 'menucompleto'];
-handler.register = true
+handler.help = ['menu']
+handler.tags = ['main']
+handler.command = ['menu', 'menú', 'help']
 
-export default handler;
+export default handler
+
+function clockString(ms) {
+    let h = Math.floor(ms / 3600000);
+    let m = Math.floor((ms % 3600000) / 60000);
+    let s = Math.floor((ms % 60000) / 1000);
+    let parts = [];
+    if (h > 0) parts.push(`${h}h`);
+    if (m > 0) parts.push(`${m}m`);
+    if (s > 0 || parts.length === 0) parts.push(`${s}s`);
+
+    return parts.join(' ');
+        }
