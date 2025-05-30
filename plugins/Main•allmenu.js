@@ -1,11 +1,20 @@
-import fs from 'fs';
+let handler = async (m, { conn, args }) => {
+    let userId = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
+    let user = global.db.data.users[userId]
+    let name = conn.getName(userId)
+    let _uptime = process.uptime() * 1000
+    let uptime = clockString(_uptime)
+    let totalreg = Object.keys(global.db.data.users).length
+    let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
+    // Asegúrate de que 'moneda' esté definido en tu configuración global si es necesario para la sección de economía
+    let moneda = global.db.data.settings[conn.user.jid].moneda || '¥enes'; // Moneda sin el $ aquí
 
-let handler = async (m, { conn }) => {
-  let txt = `
-   *𝐇𝐎𝐋𝐀 𝐁𝐈𝐄𝐍𝐕𝐄𝐍𝐈𝐎/𝐀 𝐒𝐎𝐘 𝐓𝐀𝐍𝐉𝐈𝐑𝐎-𝐁𝐎𝐓-𝐌𝐃*
+    let txt = `
+̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮
 
-  🌴 乂 *𝐁𝐈𝐄𝐍𝐕𝐄𝐍𝐈𝐃𝐎/𝐀 𝐄𝐒𝐓𝐄 𝐄𝐒 𝐌𝐈 𝐌𝐄𝐍𝐔* 乂 🌴
-  
+︶•︶°︶•︶°︶•︶°︶•︶°︶•︶°︶
+> ᰔᩚ Hola! @${userId.split('@')[0]}, Soy *Tanjiro_AI*, Aquí tienes la lista de comandos.\n*(˶ᵔ ᵕ ᵔ˶)*
+
   .⁎✿ *.ᴘᴇʀFɪʟ* ✿⁎.
   .⁎✿ *.ᴍᴇɴᴜ* ✿⁎.
   .⁎✿ *.ɢʀᴜᴘᴏꜱ* ✿⁎.
