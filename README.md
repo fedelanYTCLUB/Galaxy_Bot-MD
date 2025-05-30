@@ -1,11 +1,3 @@
-<h1 align="center">✦ TANJIRO-BOT-MD✦</h1>
-
- <img src= "">
-    </p>
-
-   
-</details>
-
-### **`👑 Propietario`**
-<a
-href="https://github.com/federico130"><img src=.png"width="130"height="130"alt="fedelan"/></a>
+<h1 align="center">୨🐉୧┈┈ ɢᴏᴋᴜ_ʙᴏᴛ ┈┈୨🐉୧</h1>
+<p align="center"><img src="https://files.catbox.moe/jl731y.jpg" alt="Imagen del Bot Goku" width="500px"></p>
+<p align="center">🌸 Tu guerrero por siempre 🌸</p>
