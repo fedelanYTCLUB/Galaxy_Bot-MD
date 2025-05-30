@@ -27,7 +27,7 @@ apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
 ```
 
 ```bash
-git clone https://github.com/fedelanYTOFC/leon_Bot && cd leon_Bot 
+git clone https://github.com/fedelanYTCLUB/Galaxy_Bot-MD && cd Galaxy_Bot-MD 
 ```
 
 ```bash
