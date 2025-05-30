@@ -2,7 +2,7 @@
 <p align="center"><img src="https://files.catbox.moe/jl731y.jpg" alt="Imagen del Bot Goku" width="500px"></p>
 <p align="center">🌸 Tu guerrero por siempre 🌸</p>
 
-<details>
+
 
 <!-- RAINBOW LINE BOT -->
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
